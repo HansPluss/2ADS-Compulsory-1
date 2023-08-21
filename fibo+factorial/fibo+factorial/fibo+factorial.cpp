@@ -8,9 +8,9 @@ double inverseFactorial = 3;
 double factInput; // this is what the user inputs
 
 double factorial;
-int input; // user input
+int input; // input
 
-//fibo seq
+//fibonacci seqence
 double number = 1;
 double lastNumber;
 double result;
@@ -23,10 +23,7 @@ void InverseFactorial(int iter);
 
 int main()
 {
-    std::cout << "Hello there, it do be math tho\n";
-    
-
-    
+        std::cout << "Hello there, it do be math tho\n";
         std::cout << "Type the number you want to get the inverse factorial of \n";
         std::cin >> factInput;
         inverseFactorial = factInput;
