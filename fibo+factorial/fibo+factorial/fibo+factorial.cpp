@@ -19,7 +19,7 @@ int iterations;
 int userInput;
 void Factorial(int num);
 void Fibonacci(int iteration);
-void InverseFactorial(int iteration);
+void InverseFactorial(int iter);
 
 int main()
 {
@@ -30,25 +30,24 @@ int main()
         std::cout << "Type the number you want to get the inverse factorial of \n";
         std::cin >> factInput;
         inverseFactorial = factInput;
-        if (input < 0) {
+        if (factInput < 0) {
             std::cout << "ERROR, Number can not be lower than 0! \n";
 
         }
-        else if (input == 0) {
+        else if (factInput == 0) {
             inverseFactorial = 1;
-            std::cout << inverseFactorial << "\n";
+           
         }
         else if (!cin) {
             std::cout << "ERROR, cannot be string \n";
             cin.clear();
             cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
-        
         else {
             InverseFactorial(inverseFactorial);
         }
-       
-        std::cout << inverseFactorial << "\n";
+        
+        
         cin.clear();
         std::cout << "Type the number you want to get the factorial of \n";
         std::cin >> input;
@@ -68,7 +67,6 @@ int main()
         else {
             Factorial(input);
         }
-       
         std::cout << "Type the number of iterations of the sequence you want \n";
         std::cin >> userInput;
         iterations = userInput;
@@ -110,15 +108,17 @@ void Fibonacci(int iteration) {
         std::cout << result << "\n";
     }
 }
-void InverseFactorial(int iteration)
+void InverseFactorial(int iter)
 {
-    for (int i = iteration - 1; i > 0; i--) {
+    inverseFactorial = iter;
+    for (int i = inverseFactorial - 1; i > 0; i--) {
 
         // simply takes the next number and divide it with the current one
         //example 5!^-1 = 5/4/3/2/1
-        iteration /= i;
+        inverseFactorial /= i;
 
     }
+    std::cout << inverseFactorial << "\n";
 }
 
 
