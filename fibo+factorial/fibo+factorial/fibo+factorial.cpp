@@ -17,7 +17,7 @@ int iterations;
 int userInput;
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Hello there, it do be math tho\n";
     
 
     
@@ -58,15 +58,22 @@ int main()
         std::cout << "Type the number of iterations of the sequence you want \n";
         std::cin >> userInput;
         iterations = userInput;
-        for (int i = 0; i < iterations; i++) {
-
-            result = (number + lastNumber);
-            number = lastNumber;
-            lastNumber = result;
-
-
-            std::cout << result << "\n";
+        if (iterations <= 0) {
+            std::cout << "ERORR can't be lower than 0 or string! \n";
+            
         }
+        else {
+            for (int i = 0; i < iterations; i++) {
+
+                result = (number + lastNumber);
+                number = lastNumber;
+                lastNumber = result;
+
+
+                std::cout << result << "\n";
+            }
+        }
+        
 
         main();
     
