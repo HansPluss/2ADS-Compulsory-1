@@ -1,6 +1,0 @@
-﻿  fibo+factorial.cpp
-C:\Users\hansm\OneDrive\Skrivebord\SpaceInvader\2ADS-Compulsory-1\fibo+factorial\fibo+factorial\fibo+factorial.cpp(47,30): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\hansm\OneDrive\Skrivebord\SpaceInvader\2ADS-Compulsory-1\fibo+factorial\fibo+factorial\fibo+factorial.cpp(89,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\hansm\OneDrive\Skrivebord\SpaceInvader\2ADS-Compulsory-1\fibo+factorial\fibo+factorial\fibo+factorial.cpp(114,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\hansm\OneDrive\Skrivebord\SpaceInvader\2ADS-Compulsory-1\fibo+factorial\fibo+factorial\fibo+factorial.cpp(85): warning C4717: 'main': recursive on all control paths, function will cause runtime stack overflow
-  fibo+factorial.vcxproj -> C:\Users\hansm\OneDrive\Skrivebord\SpaceInvader\2ADS-Compulsory-1\fibo+factorial\Debug\fibo+factorial.exe
