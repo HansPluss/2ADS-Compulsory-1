@@ -2,11 +2,13 @@
 //
 
 #include <iostream>
-double factorial = 3;
-double n; // this is what the user inputs
+#include <string>
+using namespace std;
+double inverseFactorial = 3;
+double factInput; // this is what the user inputs
 
-double facto;
-double input; // user input
+double factorial;
+int input; // user input
 
 //fibo seq
 double number = 1;
@@ -15,6 +17,10 @@ double result;
 
 int iterations;
 int userInput;
+void Factorial(int num);
+void Fibonacci(int iteration);
+void InverseFactorial(int iteration);
+
 int main()
 {
     std::cout << "Hello there, it do be math tho\n";
@@ -22,61 +28,97 @@ int main()
 
     
         std::cout << "Type the number you want to get the inverse factorial of \n";
-        std::cin >> n;
-        factorial = n;
-        for (int i = factorial - 1; i > 0; i--) {
-
-            // simply takes the next number and divide it with the current one
-            //example 5!^-1 = 5/4/3/2/1
-            factorial /= i;
-
-        }
-        std::cout << factorial << " \n";
-        
-        std::cout << "Type the number you want to get the factorial of \n";
-        std::cin >> input;
+        std::cin >> factInput;
+        inverseFactorial = factInput;
         if (input < 0) {
-            std::cout << "ERROR, Number can not be lower than 0 \n";
+            std::cout << "ERROR, Number can not be lower than 0! \n";
 
         }
         else if (input == 0) {
-            result = 0;
+            inverseFactorial = 1;
+            std::cout << inverseFactorial << "\n";
+        }
+        else if (!cin) {
+            std::cout << "ERROR, cannot be string \n";
+            cin.clear();
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        
+        else {
+            InverseFactorial(inverseFactorial);
+        }
+       
+        std::cout << inverseFactorial << "\n";
+        cin.clear();
+        std::cout << "Type the number you want to get the factorial of \n";
+        std::cin >> input;
+        if (input < 0) {
+            std::cout << "ERROR, Number can not be lower than 0! \n";
+
+        }
+        else if (!cin) {
+            std::cout << "ERROR, cannot be string \n";
+            cin.clear();
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        else if (input == 0 || input == 1) {
+            result = 1;
             std::cout << result << "\n";
         }
         else {
-            facto = input;
-            for (int i = facto - 1; i > 0; i--) {
-
-
-
-                facto *= i;
-
-            }
-            std::cout << facto << " \n";
+            Factorial(input);
         }
        
         std::cout << "Type the number of iterations of the sequence you want \n";
         std::cin >> userInput;
         iterations = userInput;
-        if (iterations <= 0) {
+        if (iterations <= 0 || !cin) {
             std::cout << "ERORR can't be lower than 0 or string! \n";
+            
+            cin.clear();
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             
         }
         else {
-            for (int i = 0; i < iterations; i++) {
-
-                result = (number + lastNumber);
-                number = lastNumber;
-                lastNumber = result;
-
-
-                std::cout << result << "\n";
-            }
+            Fibonacci(iterations);
         }
-        
-
         main();
     
+}
+void Factorial(int num)
+{
+    factorial = num;
+    for (int i = factorial - 1; i > 0; i--) {
+
+
+
+        factorial *= i;
+
+    }
+    std::cout << factorial << " \n";
+
+}
+void Fibonacci(int iteration) {
+
+    for (int i = 0; i < iteration; i++) {
+
+        result = (number + lastNumber);
+        number = lastNumber;
+        lastNumber = result;
+
+
+        std::cout << result << "\n";
+    }
+}
+void InverseFactorial(int iteration)
+{
+    for (int i = iteration - 1; i > 0; i--) {
+
+        // simply takes the next number and divide it with the current one
+        //example 5!^-1 = 5/4/3/2/1
+        iteration /= i;
+
+    }
 }
 
 
