@@ -4,26 +4,23 @@
 #include <iostream>
 #include <string>
 using namespace std;
-double inverseFactorial = 3;
-double factInput; // this is what the user inputs
 
+// factorial input
+int result;
 double factorial;
-int input; // input
+int input; 
 
 //fibonacci seqence
-double number = 1;
-double lastNumber;
-double result;
-
 int iterations;
 int userInput;
+//functions
 int Factorial(int num);
 int Fibonacci(int iteration);
 
 
 int main()
 {
-        std::cout << "Hello there, it do be math tho\n";
+        std::cout << "Hello\n";
         std::cout << "Type the number you want to get the factorial of \n";
         std::cin >> input;
         if (input < 0) {
